@@ -1,0 +1,26 @@
+{
+  "id": "./",
+  "name": "MiniScent Dhaka Business Desk",
+  "short_name": "MiniScent",
+  "description": "Personal perfume decant business stock, sales and profit tracker",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#f4f9fc",
+  "theme_color": "#e3f4ff",
+  "icons": [
+    {
+      "src": "icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}

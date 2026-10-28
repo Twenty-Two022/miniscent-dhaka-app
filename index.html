@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="bn">
+<head>
+<meta charset="utf-8">
+<meta name="theme-color" content="#e3f4ff">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-192.png"><title>MiniScent Dhaka — Business Desk</title>
+<style>
+:root{--bg:#f4f9fc;--panel:#fff;--ink:#152b45;--muted:#70849b;--line:#e1edf5;--blue:#8bc9f4;--blue2:#dff2ff;--sky:#3c9bd8;--mint:#42b997;--gold:#f0b75e;--red:#e77777;--shadow:0 8px 28px #254d6b0b}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 Inter,ui-sans-serif,system-ui,-apple-system,"Noto Sans Bengali",sans-serif}button,input,select{font:inherit}button{cursor:pointer;border:0;border-radius:10px;padding:10px 14px;background:var(--ink);color:white}button.secondary{background:#edf6fc;color:var(--ink);border:1px solid var(--line)}button.sky{background:var(--sky)}button.danger{background:#fff0f0;color:#b94444}.app{display:grid;grid-template-columns:220px 1fr;min-height:100vh}.side{background:linear-gradient(180deg,#e3f4ff,#f0f9ff);padding:22px 14px;border-right:1px solid #d8ebf8;display:flex;flex-direction:column;gap:22px}.brand{padding:4px 8px 20px;border-bottom:1px solid #d4e8f5}.brandmark{font-size:25px;font-family:Georgia,serif;letter-spacing:-1px}.brand small{display:block;color:#6686a1;font-style:italic;margin-top:2px}.nav{display:grid;gap:6px}.nav button{background:transparent;color:#42617d;text-align:left;padding:12px;border-radius:11px}.nav button.active,.nav button:hover{background:#cceaff;color:#12314d}.sidefoot{margin-top:auto;color:#7392a8;font-size:12px;padding:10px}.main{padding:26px;min-width:0;max-width:1600px;width:100%;margin:auto}.top{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:24px}.top h1{font-size:25px;margin:0 0 3px;letter-spacing:-.5px}.sub{color:var(--muted)}.topright{display:flex;gap:8px;align-items:center}.pill{background:#e0f3ff;color:#2677ad;padding:7px 10px;border-radius:99px;font-size:12px}.page{display:none}.page.active{display:block}.grid{display:grid;gap:14px}.metrics{grid-template-columns:repeat(4,minmax(0,1fr));margin-bottom:16px}.card{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:17px;box-shadow:var(--shadow);min-width:0}.metrichead{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px}.bubble{width:34px;height:34px;border-radius:12px;background:var(--blue2);display:grid;place-items:center;color:#287db5;font-size:17px}.metric{font-size:25px;font-weight:750;letter-spacing:-.6px;margin:13px 0 2px}.muted{color:var(--muted);font-size:12px}.two{grid-template-columns:minmax(0,1.25fr) minmax(290px,.85fr)}.sectiontitle{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 14px;font-size:16px}.sectiontitle small{font-weight:400;color:var(--muted)}.chart{height:190px;display:flex;align-items:end;gap:14px;padding:10px 4px 0;border-bottom:1px solid var(--line)}.barcol{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;justify-content:end;align-items:center;gap:7px}.bars{height:155px;width:100%;display:flex;align-items:end;justify-content:center;gap:5px}.bar{width:35%;max-width:24px;border-radius:6px 6px 0 0;background:#83bdf8;min-height:2px}.bar.profit{background:#65cdb1}.barlabel{font-size:11px;color:var(--muted)}.legend{display:flex;gap:14px;font-size:11px;color:var(--muted)}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;white-space:nowrap}th,td{text-align:left;padding:11px 9px;border-bottom:1px solid #edf3f7;font-size:12px}th{background:#f5faff;color:#66809a;font-weight:600}td{color:#28445f}tr:last-child td{border-bottom:0}.status{border-radius:99px;padding:4px 8px;font-size:11px;background:#e2f8ef;color:#228767}.status.low{background:#fff1d7;color:#a86a08}.list{display:grid;gap:0}.listitem{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid #edf3f7}.listitem:last-child{border-bottom:0}.listitem strong{font-size:12px}.listitem .detail{color:var(--muted);font-size:11px;margin-top:3px}.right{text-align:right}.green{color:#17956c}.red{color:#c95d5d}.forms{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:5px}.field label{font-size:12px;color:#627b93}.field input,.field select{width:100%;border:1px solid var(--line);background:#fbfdff;border-radius:10px;padding:10px;color:var(--ink);outline-color:#8bc9f4}.formactions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}.full{grid-column:1/-1}.pagehead{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:16px}.pagehead h2{margin:0;font-size:22px}.empty{padding:24px;text-align:center;color:var(--muted)}.prediction{display:grid;gap:12px}.predrow{display:grid;grid-template-columns:1fr auto;gap:5px;align-items:center}.track{height:7px;background:#edf3f8;border-radius:99px;overflow:hidden;grid-column:1/-1}.track span{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,#83c8f5,#47bd9d)}.note{background:#f0f9ff;border:1px solid #d8eefb;border-radius:12px;padding:12px;color:#55738e;font-size:12px}.smallbtn{padding:6px 9px;font-size:11px}.bottomnote{margin-top:18px;text-align:center;color:#8ba0b2;font-size:11px}
+@media(max-width:1000px){.app{grid-template-columns:1fr}.side{position:static;padding:12px;gap:10px}.brand{border:0;padding:4px 8px}.brandmark{font-size:21px}.nav{display:flex;overflow:auto}.nav button{white-space:nowrap;padding:9px 11px}.sidefoot{display:none}.main{padding:16px}.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
+@media(max-width:560px){.main{padding:12px}.top{align-items:flex-start}.top h1{font-size:20px}.topright .pill{display:none}.metrics{gap:9px}.card{padding:13px}.metric{font-size:21px}.forms{grid-template-columns:1fr}.pagehead{align-items:flex-start;flex-direction:column}.chart{gap:6px}.bar{width:42%}}
+
+/* Mobile-first, app-like layout */
+@media(max-width:760px){
+  body{padding-bottom:78px;background:#f4f9fc}
+  .app{display:block;min-height:100vh}
+  .side{position:fixed;z-index:20;left:0;right:0;bottom:0;top:auto;height:70px;padding:5px 4px calc(5px + env(safe-area-inset-bottom));border-right:0;border-top:1px solid #d8ebf8;background:rgba(239,249,255,.97);backdrop-filter:blur(14px);display:block}
+  .brand,.sidefoot{display:none}
+  .nav{height:100%;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0;align-items:center}
+  .nav button{font-size:10px;line-height:1.15;text-align:center;padding:7px 1px;border-radius:10px;min-width:0;white-space:normal;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+  .main{padding:14px 12px 24px;width:100%;margin:0}
+  .top{margin-bottom:16px;align-items:center;gap:8px}
+  .top h1{font-size:20px;line-height:1.25}
+  .top .sub{font-size:12px;max-width:245px}
+  .topright{gap:0}
+  #exportBtn{font-size:0;padding:9px 10px}
+  #exportBtn:before{content:"⇩";font-size:17px}
+  .pill{font-size:10px;padding:6px 8px}
+  .metrics{grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;margin-bottom:10px}
+  .card{padding:13px;border-radius:15px}
+  .metrichead{font-size:11px;gap:7px}
+  .bubble{width:29px;height:29px;border-radius:10px;font-size:14px;flex-shrink:0}
+  .metric{font-size:21px;margin:10px 0 1px;overflow-wrap:anywhere}
+  .muted{font-size:11px}
+  .two{grid-template-columns:minmax(0,1fr);gap:10px}
+  .grid{gap:10px}
+  .sectiontitle{font-size:14px;margin-bottom:10px}
+  .chart{height:155px;gap:5px}
+  .bars{height:120px;gap:3px}
+  .barlabel{font-size:10px}
+  th,td{padding:10px 8px;font-size:11px}
+  .tablewrap{margin:0 -3px}
+  .forms{grid-template-columns:1fr;gap:10px}
+  .field input,.field select{padding:12px;font-size:16px;min-height:44px}
+  button{min-height:42px}
+  .pagehead{flex-direction:column;align-items:stretch;margin-bottom:12px;gap:9px}
+  .pagehead h2{font-size:21px}
+  .pagehead button{width:100%}
+  .pagehead .field{width:100%}
+  .formactions button{flex:1}
+  .listitem{padding:11px 0}
+  .listitem strong{font-size:12px}
+  .note{font-size:11px;line-height:1.55}
+  .bottomnote{font-size:10px;padding-bottom:5px}
+  #page-dashboard .grid.metrics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  #page-dashboard .grid.metrics .card{min-height:112px}
+  #page-reports .grid.metrics{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  #page-reports .metric{font-size:20px}
+  #page-settings .two{grid-template-columns:1fr}
+}
+@media(max-width:380px){
+  .main{padding-left:9px;padding-right:9px}
+  .top h1{font-size:18px}
+  .nav button{font-size:9px}
+  .nav button[data-page="reports"]{font-size:8px}
+  .metric{font-size:19px}
+  .metrichead{font-size:10px}
+}
+
+</style>
+</head>
+<body>
+<div class="app">
+<aside class="side">
+ <div class="brand"><div class="brandmark">◈ MiniScent <span style="font-size:10px;letter-spacing:3px">DHAKA</span></div><small>Small bottles. Big memories.</small></div>
+ <nav class="nav" id="nav">
+  <button class="active" data-page="dashboard">⌂ &nbsp; Overview</button><button data-page="stock">▦ &nbsp; Stock</button><button data-page="sales">↗ &nbsp; Sales</button><button data-page="expenses">＋ &nbsp; Expenses</button><button data-page="reports">▤ &nbsp; Monthly report</button><button data-page="prediction">✧ &nbsp; Prediction</button><button data-page="settings">⚙ &nbsp; Data & settings</button>
+ </nav>
+ <div class="sidefoot">MINISCENT DHAKA<br>Personal business desk · v0.1</div>
+</aside>
+<main class="main">
+<header class="top"><div><h1 id="greeting">Your business, at a glance.</h1><div class="sub">তোমার perfume business-এর হিসাব—এক জায়গায়, গুছিয়ে।</div></div><div class="topright"><span class="pill">● Local workspace</span><button class="secondary" id="exportBtn">Export data</button></div></header>
+
+<section class="page active" id="page-dashboard">
+ <div class="grid metrics">
+  <div class="card"><div class="metrichead"><span class="bubble">▦</span> Current stock value</div><div class="metric" id="m-stock">৳0</div><div class="muted" id="m-ml">0 ml available</div></div>
+  <div class="card"><div class="metrichead"><span class="bubble" style="background:#eee9ff;color:#765ac4">↗</span> Sales this month</div><div class="metric" id="m-sales">৳0</div><div class="muted" id="m-salesml">0 ml sold</div></div>
+  <div class="card"><div class="metrichead"><span class="bubble" style="background:#e0f8ee;color:#198967">✧</span> Net profit this month</div><div class="metric green" id="m-profit">৳0</div><div class="muted">Sales − stock cost − packaging − expenses</div></div>
+  <div class="card"><div class="metrichead"><span class="bubble" style="background:#fff1d9;color:#a87319">◎</span> Orders this month</div><div class="metric" id="m-orders">0</div><div class="muted">Recorded sale entries</div></div>
+ </div>
+ <div class="grid two">
+  <div class="grid">
+   <div class="card"><div class="sectiontitle">Monthly performance <div class="legend"><span><i class="dot" style="background:#83bdf8"></i>Sales</span><span><i class="dot" style="background:#65cdb1"></i>Profit</span></div></div><div class="chart" id="chart"></div></div>
+   <div class="card"><div class="sectiontitle">Stock overview <button class="secondary smallbtn" data-goto="stock">View all ↗</button></div><div class="tablewrap"><table><thead><tr><th>Perfume</th><th>Available</th><th>Cost/ml</th><th>Status</th></tr></thead><tbody id="stockPreview"></tbody></table></div></div>
+   <div class="card"><div class="sectiontitle">This month's breakdown</div><div class="grid metrics" style="grid-template-columns:repeat(3,minmax(0,1fr));margin:0"><div><div class="muted">Sales</div><strong id="b-sales">৳0</strong></div><div><div class="muted">Expenses</div><strong id="b-expenses">৳0</strong></div><div><div class="muted">Net profit</div><strong class="green" id="b-profit">৳0</strong></div></div></div>
+  </div>
+  <div class="grid">
+   <div class="card"><div class="sectiontitle">Next month forecast <span class="pill">BETA</span></div><div class="muted" style="margin-bottom:14px">আগের মাসগুলোর recorded sales থেকে simple estimate</div><div id="dashPrediction" class="prediction"></div><div class="note" style="margin-top:13px">কমপক্ষে ২–৩ মাসের sales data থাকলে prediction আরও কাজে লাগবে। এটি নিশ্চিত বিক্রির প্রতিশ্রুতি নয়।</div></div>
+   <div class="card"><div class="sectiontitle">Recent activity <button class="secondary smallbtn" data-goto="reports">All records</button></div><div id="recent" class="list"></div></div>
+   <div class="card"><div class="sectiontitle">Quick add</div><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="sky" data-goto="stock">＋ Add stock</button><button class="secondary" data-goto="sales">＋ Record sale</button><button class="secondary" data-goto="expenses">＋ Add expense</button></div></div>
+  </div>
+ </div>
+</section>
+
+<section class="page" id="page-stock">
+ <div class="pagehead"><div><h2>Stock room</h2><div class="sub">প্রতিটি perfume-এর কেনা, ব্যবহার ও অবশিষ্ট মিলিলিটার।</div></div><button class="sky" id="showStockForm">＋ Add perfume / restock</button></div>
+ <div class="card" id="stockFormCard" style="display:none;margin-bottom:14px"><h3 style="margin:0 0 14px">Stock entry</h3><form id="stockForm"><div class="forms">
+  <div class="field"><label>Perfume name</label><input name="name" required placeholder="e.g. Dior Sauvage EDT"></div>
+  <div class="field"><label>Purchase date</label><input name="date" type="date" required></div>
+  <div class="field"><label>Purchase volume (ml)</label><input name="ml" type="number" min=".1" step=".1" required placeholder="100"></div>
+  <div class="field"><label>Total perfume purchase cost (৳)</label><input name="cost" type="number" min="0" step=".01" required placeholder="8500"></div>
+  <div class="field"><label>Extra buying / delivery cost (৳)</label><input name="extra" type="number" min="0" step=".01" value="0"></div>
+  <div class="field"><label>Supplier / note (optional)</label><input name="note" placeholder="Shop, invoice, batch…"></div>
+ </div><div class="formactions"><button class="sky">Save stock entry</button><button type="button" class="secondary" id="cancelStock">Cancel</button></div></form></div>
+ <div class="card"><div class="sectiontitle">All perfumes <span class="muted" id="stockCount">0 items</span></div><div class="tablewrap"><table><thead><tr><th>Perfume</th><th>Purchased</th><th>Used / sold</th><th>Available</th><th>Total cost</th><th>Cost/ml</th><th>Action</th></tr></thead><tbody id="stockTable"></tbody></table></div></div>
+ <div class="note" style="margin-top:12px">একই perfume আবার কিনলে একই নাম লিখে নতুন entry দাও। কেনার প্রতিটি batch আলাদাভাবে সংরক্ষিত হবে।</div>
+</section>
+
+<section class="page" id="page-sales">
+ <div class="pagehead"><div><h2>Record a sale</h2><div class="sub">কত ml বিক্রি হলো, কত টাকায়, আর packaging cost কত।</div></div></div>
+ <div class="grid two"><div class="card"><h3 style="margin:0 0 14px">New sale</h3><form id="saleForm"><div class="forms">
+  <div class="field full"><label>Perfume</label><select name="stockId" id="saleStock" required></select></div>
+  <div class="field"><label>Sale date</label><input name="date" type="date" required></div>
+  <div class="field"><label>Volume sold (ml)</label><input name="ml" type="number" min=".1" step=".1" required placeholder="10"></div>
+  <div class="field"><label>Total sale amount (৳)</label><input name="amount" type="number" min="0" step=".01" required placeholder="1200"></div>
+  <div class="field"><label>Decant bottle cost (৳)</label><input name="bottle" type="number" min="0" step=".01" value="0"></div>
+  <div class="field"><label>Packaging + label/printing (৳)</label><input name="pack" type="number" min="0" step=".01" value="0"></div>
+  <div class="field"><label>Delivery cost paid by you (৳)</label><input name="delivery" type="number" min="0" step=".01" value="0"></div>
+  <div class="field"><label>Order reference / note</label><input name="note" placeholder="Order ID, customer alias…"></div>
+ </div><div class="formactions"><button class="sky">Save sale</button></div></form><div class="note" style="margin-top:13px">Profit হিসাব হবে: sale amount − perfume-এর proportional cost − bottle − packaging/printing − delivery cost.</div></div>
+ <div class="card"><div class="sectiontitle">Sales history</div><div id="salesList" class="list"></div></div></div>
+</section>
+
+<section class="page" id="page-expenses">
+ <div class="pagehead"><div><h2>Business expenses</h2><div class="sub">Stock কেনার বাইরে ব্যবসার অন্যান্য খরচ।</div></div></div>
+ <div class="grid two"><div class="card"><h3 style="margin:0 0 14px">Add expense</h3><form id="expenseForm"><div class="forms">
+  <div class="field"><label>Date</label><input name="date" type="date" required></div>
+  <div class="field"><label>Category</label><select name="category"><option>Marketing / ads</option><option>Photoshoot</option><option>Transport</option><option>Tools / supplies</option><option>Verification / documentation</option><option>Other</option></select></div>
+  <div class="field"><label>Amount (৳)</label><input name="amount" type="number" min=".01" step=".01" required></div>
+  <div class="field"><label>Description</label><input name="note" required placeholder="What was the expense?"></div>
+ </div><div class="formactions"><button class="sky">Save expense</button></div></form></div>
+ <div class="card"><div class="sectiontitle">Expense history</div><div id="expenseList" class="list"></div></div></div>
+</section>
+
+<section class="page" id="page-reports">
+ <div class="pagehead"><div><h2>Monthly report</h2><div class="sub">নির্বাচিত মাসের আয়, খরচ ও net profit।</div></div><div class="field"><label>Select month</label><input id="reportMonth" type="month"></div></div>
+ <div class="grid metrics"><div class="card"><div class="muted">Sales revenue</div><div class="metric" id="r-sales">৳0</div></div><div class="card"><div class="muted">Perfume cost of sold ml</div><div class="metric" id="r-cogs">৳0</div></div><div class="card"><div class="muted">Packaging / delivery</div><div class="metric" id="r-pack">৳0</div></div><div class="card"><div class="muted">Net profit</div><div class="metric green" id="r-profit">৳0</div></div></div>
+ <div class="grid two"><div class="card"><div class="sectiontitle">Purchases in selected month</div><div id="purchaseReport" class="list"></div></div><div class="card"><div class="sectiontitle">Expenses in selected month</div><div id="expenseReport" class="list"></div></div></div>
+ <div class="card" style="margin-top:14px"><div class="sectiontitle">Sales in selected month</div><div class="tablewrap"><table><thead><tr><th>Date</th><th>Perfume</th><th>Volume</th><th>Revenue</th><th>Cost + packaging</th><th>Net profit</th></tr></thead><tbody id="reportSales"></tbody></table></div></div>
+</section>
+
+<section class="page" id="page-prediction">
+ <div class="pagehead"><div><h2>Sales forecast</h2><div class="sub">আগের মাসের data দেখে পরের মাসের সম্ভাব্য demand estimate।</div></div><button class="secondary" id="refreshPred">↻ Recalculate</button></div>
+ <div class="grid two"><div class="card"><div class="sectiontitle">Likely best sellers</div><div id="fullPrediction" class="prediction"></div></div><div class="card"><div class="sectiontitle">How this estimate works</div><p class="sub">প্রতি perfume-এর আগের মাসগুলোতে বিক্রি হওয়া ml দেখা হয়। সাম্প্রতিক মাসকে একটু বেশি গুরুত্ব দিয়ে weighted average হিসাব করা হয়। তারপর available stock-এর সঙ্গে মিলিয়ে সম্ভাব্য demand দেখানো হয়।</p><div class="note">এটি প্রাথমিক rule-based forecast, machine learning model নয়। কয়েক মাসের নির্ভরযোগ্য sales history না থাকলে ফল দুর্বল হবে।</div><p class="muted">পরামর্শ: প্রতি sale সময়মতো record করো, একই perfume-এর নাম consistently ব্যবহার করো এবং stock adjustment ঠিক রাখো।</p></div></div>
+</section>
+
+<section class="page" id="page-settings">
+ <div class="pagehead"><div><h2>Data & settings</h2><div class="sub">তোমার data export, restore বা reset করো।</div></div></div>
+ <div class="grid two"><div class="card"><h3 style="margin-top:0">Backup</h3><p class="sub">JSON backup export করে নিরাপদে রাখো। অন্য device/browser-এ data আনতে restore করতে পারো।</p><div style="display:flex;gap:8px;flex-wrap:wrap"><button class="sky" id="exportBtn2">Download backup</button><label class="secondary" style="display:inline-block;padding:10px 14px;border-radius:10px;cursor:pointer">Restore backup <input id="importFile" type="file" accept=".json,application/json" hidden></label></div></div><div class="card"><h3 style="margin-top:0">Data safety</h3><p class="sub">এই draft app-এর data এই browser-এর local storage-এ থাকে; server-এ যায় না। Browser data clear করলে হারাতে পারে। নিয়মিত backup রাখবে।</p><button class="danger" id="resetBtn">Reset all local data</button></div></div>
+</section>
+<div class="bottomnote">MiniScent Dhaka · Personal use prototype · Save a backup regularly</div>
+</main></div>
+<script>
+const KEY='miniscent_desk_v1';
+const today=()=>new Date().toISOString().slice(0,10);
+const monthNow=()=>today().slice(0,7);
+let db=load();
+function load(){try{return JSON.parse(localStorage.getItem(KEY))||{stock:[],sales:[],expenses:[]}}catch(e){return {stock:[],sales:[],expenses:[]}}}
+function save(){localStorage.setItem(KEY,JSON.stringify(db));render()}
+function money(n){return '৳'+Number(n||0).toLocaleString('en-BD',{maximumFractionDigits:2,minimumFractionDigits:0})}
+function num(n){return Number(n)||0}
+function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function dateInput(form){let x=form.querySelector('[name=date]');if(x&&!x.value)x.value=today()}
+function stockName(s){return s.name}
+function stockRemaining(s){return Math.max(0,num(s.ml)-db.sales.filter(x=>x.stockId===s.id).reduce((a,x)=>a+num(x.ml),0))}
+function costPerMl(s){return (num(s.cost)+num(s.extra))/Math.max(.001,num(s.ml))}
+function monthOf(d){return String(d||'').slice(0,7)}
+function salesForMonth(m){return db.sales.filter(x=>monthOf(x.date)===m)}
+function expensesForMonth(m){return db.expenses.filter(x=>monthOf(x.date)===m)}
+function purchasesForMonth(m){return db.stock.filter(x=>monthOf(x.date)===m)}
+function saleCosts(s){let st=db.stock.find(z=>z.id===s.stockId);let c=st?costPerMl(st)*num(s.ml):0;return {cogs:c,extras:num(s.bottle)+num(s.pack)+num(s.delivery),profit:num(s.amount)-c-num(s.bottle)-num(s.pack)-num(s.delivery)}}
+function totals(m){let ss=salesForMonth(m),ee=expensesForMonth(m);let revenue=ss.reduce((a,s)=>a+num(s.amount),0),cogs=0,extras=0,profit=0;ss.forEach(s=>{let c=saleCosts(s);cogs+=c.cogs;extras+=c.extras;profit+=c.profit});let exp=ee.reduce((a,e)=>a+num(e.amount),0);return {ss,ee,revenue,cogs,extras,exp,profit:profit-exp,rawProfit:profit}}
+function goto(p){document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id==='page-'+p));document.querySelectorAll('#nav button').forEach(x=>x.classList.toggle('active',x.dataset.page===p));document.getElementById('greeting').textContent=({dashboard:'Your business, at a glance.',stock:'Stock room',sales:'Sales desk',expenses:'Business expenses',reports:'Monthly report',prediction:'Sales forecast',settings:'Data & settings'})[p];if(p==='reports')renderReport();if(p==='prediction')renderPredictions()}
+document.querySelectorAll('#nav button').forEach(b=>b.addEventListener('click',()=>goto(b.dataset.page)));
+document.querySelectorAll('[data-goto]').forEach(b=>b.addEventListener('click',()=>goto(b.dataset.goto)));
+document.getElementById('showStockForm').onclick=()=>{document.getElementById('stockFormCard').style.display='block';dateInput(document.getElementById('stockForm'))};
+document.getElementById('cancelStock').onclick=()=>document.getElementById('stockFormCard').style.display='none';
+document.getElementById('stockForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);db.stock.push({id:crypto.randomUUID(),name:f.get('name').trim(),date:f.get('date'),ml:num(f.get('ml')),cost:num(f.get('cost')),extra:num(f.get('extra')),note:f.get('note')});e.target.reset();dateInput(e.target);document.getElementById('stockFormCard').style.display='none';save();});
+document.getElementById('saleForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target),id=f.get('stockId'),ml=num(f.get('ml')),st=db.stock.find(s=>s.id===id);if(!st)return alert('আগে stock entry যোগ করো।');if(ml>stockRemaining(st)+.0001)return alert('এই perfume-এর available stock-এর চেয়ে বেশি ml বিক্রি দেখানো যাচ্ছে।');db.sales.push({id:crypto.randomUUID(),stockId:id,date:f.get('date'),ml,amount:num(f.get('amount')),bottle:num(f.get('bottle')),pack:num(f.get('pack')),delivery:num(f.get('delivery')),note:f.get('note')});e.target.reset();dateInput(e.target);save();alert('Sale saved.');});
+document.getElementById('expenseForm').addEventListener('submit',e=>{e.preventDefault();let f=new FormData(e.target);db.expenses.push({id:crypto.randomUUID(),date:f.get('date'),category:f.get('category'),amount:num(f.get('amount')),note:f.get('note')});e.target.reset();dateInput(e.target);save();});
+function renderStock(){let rows=db.stock.map(s=>{let used=num(s.ml)-stockRemaining(s);return `<tr><td><strong>${esc(s.name)}</strong><div class="muted">${esc(s.date)} ${s.note?'· '+esc(s.note):''}</div></td><td>${num(s.ml)} ml</td><td>${used.toFixed(1)} ml</td><td><strong>${stockRemaining(s).toFixed(1)} ml</strong></td><td>${money(num(s.cost)+num(s.extra))}</td><td>${money(costPerMl(s))}</td><td><button class="danger smallbtn" onclick="deleteStock('${s.id}')">Delete</button></td></tr>`}).join('');document.getElementById('stockTable').innerHTML=rows||'<tr><td colspan="7" class="empty">এখনো stock entry নেই। Add perfume / restock দিয়ে শুরু করো।</td></tr>';document.getElementById('stockCount').textContent=db.stock.length+' entries';document.getElementById('stockPreview').innerHTML=db.stock.slice(-5).reverse().map(s=>`<tr><td>${esc(s.name)}</td><td>${stockRemaining(s).toFixed(1)} ml</td><td>${money(costPerMl(s))}</td><td><span class="status ${stockRemaining(s)<10?'low':''}">${stockRemaining(s)<10?'Low':'Available'}</span></td></tr>`).join('')||'<tr><td colspan="4" class="empty">No stock yet</td></tr>';document.getElementById('saleStock').innerHTML=db.stock.filter(s=>stockRemaining(s)>0).map(s=>`<option value="${s.id}">${esc(s.name)} — ${stockRemaining(s).toFixed(1)} ml left</option>`).join('')||'<option value="">Add stock first</option>'}
+function deleteStock(id){if(db.sales.some(s=>s.stockId===id))return alert('এই stock batch থেকে sale আছে, তাই delete করা যাচ্ছে না।');if(confirm('এই stock entry delete করবে?')){db.stock=db.stock.filter(s=>s.id!==id);save()}}
+function renderSales(){let items=[...db.sales].reverse();document.getElementById('salesList').innerHTML=items.map(s=>{let st=db.stock.find(z=>z.id===s.stockId),c=saleCosts(s);return `<div class="listitem"><div><strong>${esc(st?.name||'Deleted perfume')} · ${s.ml} ml</strong><div class="detail">${esc(s.date)} ${s.note?'· '+esc(s.note):''}</div><div class="detail">Profit: <span class="${c.profit>=0?'green':'red'}">${money(c.profit)}</span></div></div><div class="right"><strong>${money(s.amount)}</strong><div><button class="danger smallbtn" onclick="deleteSale('${s.id}')">Delete</button></div></div></div>`}).join('')||'<div class="empty">এখনো কোনো sale record নেই।</div>'}
+function deleteSale(id){if(confirm('এই sale record delete করবে?')){db.sales=db.sales.filter(s=>s.id!==id);save()}}
+function renderExpenses(){document.getElementById('expenseList').innerHTML=[...db.expenses].reverse().map(e=>`<div class="listitem"><div><strong>${esc(e.category)}</strong><div class="detail">${esc(e.date)} · ${esc(e.note)}</div></div><div class="right"><strong class="red">${money(e.amount)}</strong><div><button class="danger smallbtn" onclick="deleteExpense('${e.id}')">Delete</button></div></div></div>`).join('')||'<div class="empty">এখনো কোনো expense নেই।</div>'}
+function deleteExpense(id){if(confirm('এই expense delete করবে?')){db.expenses=db.expenses.filter(e=>e.id!==id);save()}}
+function renderChart(){let months=[];let d=new Date();for(let i=5;i>=0;i--){let x=new Date(d.getFullYear(),d.getMonth()-i,1);months.push(x.toISOString().slice(0,7))}let vals=months.map(m=>({m,t:totals(m)})),max=Math.max(1,...vals.map(x=>Math.max(x.t.revenue,x.t.profit)));document.getElementById('chart').innerHTML=vals.map(x=>`<div class="barcol"><div class="bars"><div class="bar" title="Sales ${money(x.t.revenue)}" style="height:${Math.max(2,x.t.revenue/max*100)}%"></div><div class="bar profit" title="Profit ${money(x.t.profit)}" style="height:${Math.max(2,Math.max(0,x.t.profit)/max*100)}%"></div></div><div class="barlabel">${new Date(x.m+'-01T12:00:00').toLocaleDateString('en-US',{month:'short'})}</div></div>`).join('')}
+function prediction(){let names=[...new Set(db.stock.map(s=>s.name))];return names.map(name=>{let matching=db.stock.filter(s=>s.name===name),ids=matching.map(s=>s.id),monthly=[];for(let i=3;i>=0;i--){let d=new Date();d.setDate(1);d.setMonth(d.getMonth()-i);let m=d.toISOString().slice(0,7);monthly.push(db.sales.filter(s=>ids.includes(s.stockId)&&monthOf(s.date)===m).reduce((a,s)=>a+num(s.ml),0))}let weights=[1,2,3,4],pred=monthly.reduce((a,v,i)=>a+v*weights[i],0)/weights.reduce((a,b)=>a+b,0);let available=matching.reduce((a,s)=>a+stockRemaining(s),0);return {name,pred,available,months:monthly,score:pred}}).sort((a,b)=>b.score-a.score).filter(x=>x.pred>0)}
+function renderPredictions(){let preds=prediction(),max=Math.max(1,...preds.map(p=>p.pred));let markup=preds.slice(0,6).map((p,i)=>`<div class="predrow"><div><strong>${i+1}. ${esc(p.name)}</strong><div class="muted">Estimate: ${Math.round(p.pred*0.8)}–${Math.ceil(p.pred*1.2)} ml · Stock: ${p.available.toFixed(1)} ml</div></div><span class="status ${p.available<p.pred?'low':''}">${p.available<p.pred?'Restock?':'In stock'}</span><div class="track"><span style="width:${Math.max(4,p.pred/max*100)}%"></span></div></div>`).join('');let empty='<div class="empty">Prediction দেখানোর মতো sales history নেই। কিছু sale record করো—বিশেষ করে ২–৩ মাসের data হলে ভালো।</div>';document.getElementById('dashPrediction').innerHTML=markup||empty;document.getElementById('fullPrediction').innerHTML=markup||empty}
+function renderRecent(){let arr=[...db.sales.map(s=>({date:s.date,label:'Sale · '+(db.stock.find(x=>x.id===s.stockId)?.name||'Perfume'),amount:s.amount,sign:'+',cls:'green'})),...db.expenses.map(e=>({date:e.date,label:'Expense · '+e.category,amount:e.amount,sign:'−',cls:'red'})),...db.stock.map(s=>({date:s.date,label:'New stock · '+s.name,amount:num(s.cost)+num(s.extra),sign:'+',cls:'',sub:s.ml+' ml'}))].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);document.getElementById('recent').innerHTML=arr.map(x=>`<div class="listitem"><div><strong>${esc(x.label)}</strong><div class="detail">${esc(x.date)}${x.sub?' · '+x.sub:''}</div></div><strong class="${x.cls}">${x.sign}${money(x.amount)}</strong></div>`).join('')||'<div class="empty">No activity yet.</div>'}
+function renderReport(){let m=document.getElementById('reportMonth').value||monthNow(),t=totals(m);document.getElementById('r-sales').textContent=money(t.revenue);document.getElementById('r-cogs').textContent=money(t.cogs);document.getElementById('r-pack').textContent=money(t.extras);document.getElementById('r-profit').textContent=money(t.profit);document.getElementById('purchaseReport').innerHTML=purchasesForMonth(m).map(s=>`<div class="listitem"><div><strong>${esc(s.name)}</strong><div class="detail">${s.ml} ml · ${esc(s.date)}</div></div><strong>${money(num(s.cost)+num(s.extra))}</strong></div>`).join('')||'<div class="empty">এই মাসে stock purchase নেই।</div>';document.getElementById('expenseReport').innerHTML=t.ee.map(e=>`<div class="listitem"><div><strong>${esc(e.category)}</strong><div class="detail">${esc(e.note)} · ${esc(e.date)}</div></div><strong class="red">${money(e.amount)}</strong></div>`).join('')||'<div class="empty">এই মাসে expense নেই।</div>';document.getElementById('reportSales').innerHTML=t.ss.map(s=>{let st=db.stock.find(z=>z.id===s.stockId),c=saleCosts(s);return `<tr><td>${esc(s.date)}</td><td>${esc(st?.name||'Perfume')}</td><td>${s.ml} ml</td><td>${money(s.amount)}</td><td>${money(c.cogs+c.extras)}</td><td class="${c.profit>=0?'green':'red'}">${money(c.profit)}</td></tr>`}).join('')||'<tr><td colspan="6" class="empty">এই মাসে sale নেই।</td></tr>'}
+function render(){let m=monthNow(),t=totals(m);let stockVal=db.stock.reduce((a,s)=>a+stockRemaining(s)*costPerMl(s),0),ml=db.stock.reduce((a,s)=>a+stockRemaining(s),0);document.getElementById('m-stock').textContent=money(stockVal);document.getElementById('m-ml').textContent=ml.toFixed(1)+' ml available';document.getElementById('m-sales').textContent=money(t.revenue);document.getElementById('m-salesml').textContent=t.ss.reduce((a,s)=>a+num(s.ml),0).toFixed(1)+' ml sold';document.getElementById('m-profit').textContent=money(t.profit);document.getElementById('m-orders').textContent=t.ss.length;document.getElementById('b-sales').textContent=money(t.revenue);document.getElementById('b-expenses').textContent=money(t.exp+t.extras);document.getElementById('b-profit').textContent=money(t.profit);renderStock();renderSales();renderExpenses();renderChart();renderPredictions();renderRecent();if(document.getElementById('page-reports').classList.contains('active'))renderReport()}
+document.getElementById('reportMonth').value=monthNow();document.getElementById('reportMonth').addEventListener('change',renderReport);document.getElementById('refreshPred').onclick=renderPredictions;
+function exportData(){let blob=new Blob([JSON.stringify(db,null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='miniscent-backup-'+today()+'.json';a.click();URL.revokeObjectURL(url)}
+document.getElementById('exportBtn').onclick=exportData;document.getElementById('exportBtn2').onclick=exportData;
+document.getElementById('importFile').addEventListener('change',async e=>{let f=e.target.files[0];if(!f)return;try{let x=JSON.parse(await f.text());if(!Array.isArray(x.stock)||!Array.isArray(x.sales)||!Array.isArray(x.expenses))throw Error();if(confirm('বর্তমান data replace করে backup restore করবে?')){db=x;save();alert('Backup restored.')}}catch(err){alert('এই backup file valid নয়।')}e.target.value=''});
+document.getElementById('resetBtn').onclick=()=>{if(confirm('সতর্কতা: সব local data মুছে যাবে। আগে backup নিয়েছ?')){if(confirm('নিশ্চিতভাবে সব data reset করবে?')){db={stock:[],sales:[],expenses:[]};save()}}};
+dateInput(document.getElementById('stockForm'));dateInput(document.getElementById('saleForm'));dateInput(document.getElementById('expenseForm'));render();
+</script>
+<script>
+if ("serviceWorker" in navigator && location.protocol.startsWith("http")) {
+  window.addEventListener("load", () => navigator.serviceWorker.register("./sw.js").catch(()=>{}));
+}
+</script>
+</body></html>
